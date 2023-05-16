@@ -1,11 +1,15 @@
 {
-  "name": "asb",
+  "name": "@aurora2500/asb",
   "version": "1.0.0",
   "description": "Aurora Stack Builder",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "asb": "./dist/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && shx rm -r ./dist/templates && shx cp -r ./src/templates ./dist/templates"
   },
   "repository": {
     "type": "git",
@@ -26,12 +30,15 @@
   },
   "homepage": "https://github.com/Aurora2500/asb#readme",
   "devDependencies": {
+    "@types/ejs": "^3.1.2",
     "@types/inquirer": "^9.0.3",
     "@types/minimist": "^1.2.2",
     "@types/node": "^20.1.5",
+    "shx": "^0.3.4",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
+    "ejs": "^3.1.9",
     "inquirer": "^9.2.3",
     "minimist": "^1.2.8"
   }
