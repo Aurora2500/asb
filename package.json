@@ -1,0 +1,38 @@
+{
+  "name": "asb",
+  "version": "1.0.0",
+  "description": "Aurora Stack Builder",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aurora2500/asb.git"
+  },
+  "keywords": [
+    "react",
+    "prisma",
+    "trpc",
+    "materialui",
+    "miui",
+    "generator"
+  ],
+  "author": "Aurora Zuoris <programming.aurora@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aurora2500/asb/issues"
+  },
+  "homepage": "https://github.com/Aurora2500/asb#readme",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^20.1.5",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.3",
+    "minimist": "^1.2.8"
+  }
+}
