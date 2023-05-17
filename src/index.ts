@@ -39,10 +39,7 @@ async function main() {
 		process.exit(1);
 	}
 
-	console.log({
-		projectPath: fullProjectPath,
-		projectName: suggestedName
-	})
+	checkEmptyDir(fullProjectPath);
 
 	const questions: DistinctQuestion[] = []
 
@@ -77,13 +74,17 @@ async function main() {
 	createProject(fullProjectPath, templateDir, templateData);
 }
 
+function checkEmptyDir(dir: string) {
+	if (fs.existsSync(dir) && fs.readdirSync(dir).length > 0) {
+		console.log(chalk.red("The root of the project must be empty."));
+		process.exit(1);
+	}
+}
+
 function assertRootDir(dir: string) {
 	switch (fs.existsSync(dir)) {
 		case true:
-			if (fs.readdirSync(dir).length > 0) {
-				console.log(chalk.red("The root of the project must be empty."));
-				process.exit(1);
-			}
+			// Already checked that it's empty
 			break;
 		case false:
 			fs.mkdirSync(dir);

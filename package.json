@@ -4,11 +4,14 @@
   "description": "Aurora Stack Builder",
   "type": "module",
   "main": "dist/index.js",
-  "bin": {
-    "asb": "./dist/index.js"
-  },
+  "files": [
+    "dist"
+  ],
+  "bin": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "clean": "shx rm -rf ./dist",
     "build": "tsc && shx rm -rf ./dist/templates && shx cp -r ./src/templates ./dist/templates"
   },
   "repository": {
