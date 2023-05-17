@@ -1,5 +1,5 @@
 {
-  "name": "@aurora2500/asb",
+  "name": "@aurora2500/create-asb",
   "version": "1.0.0",
   "description": "Aurora Stack Builder",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && shx rm -r ./dist/templates && shx cp -r ./src/templates ./dist/templates"
+    "build": "tsc && shx rm -rf ./dist/templates && shx cp -r ./src/templates ./dist/templates"
   },
   "repository": {
     "type": "git",
